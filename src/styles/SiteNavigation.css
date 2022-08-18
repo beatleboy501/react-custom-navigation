@@ -1,0 +1,237 @@
+.SiteNavigation {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column !important;
+}
+
+.SiteNavigation .top {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  z-index: 101;
+}
+
+.SiteNavigation .top .left {
+  padding-left: 0.125rem;
+  color: black;
+  width: 33.33%;
+}
+
+.SiteNavigation .top .left .logo {
+  height: 3rem;
+  width: 3rem;
+}
+
+.SiteNavigation .top .middle {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SiteNavigation .top .middle .search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  min-width: 340px;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .Search {
+    display: none;
+  }
+}
+
+.SiteNavigation .top .right {
+  width: 33.33%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+}
+
+.SiteNavigation .bottom {
+  height: calc(100vh - 56px);
+  width: 100%;
+  display: flex;
+}
+
+.SiteNavigation .bottom .left {
+  min-width: 56px;
+  width: 56px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  transition: min-width 1.75s, width 1.75s, display 1.75s, flex-direction 1.75s, justify-content 1.75s, align-items 1.75s;
+  z-index: 1;
+  height: 100%;
+  border-right: 1px solid black;
+}
+
+.SiteNavigation .bottom .left .bottom-left-bottom,
+.SiteNavigation .bottom .left .bottom-left-top {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.SiteNavigation .bottom .left .bottom-left-bottom a,
+.SiteNavigation .bottom .left .bottom-left-bottom .rotating-arrow,
+.SiteNavigation .bottom .left .bottom-left-top a, 
+.SiteNavigation .bottom .left .bottom-left-top .rotating-arrow {
+  padding: 0.75rem 0 0.75rem 0.5rem;
+  align-items: center;
+  display: flex;
+  text-decoration: none !important;
+  color: #00000090;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.SiteNavigation .bottom .left .bottom-left-bottom a p,
+.SiteNavigation .bottom .left .bottom-left-bottom .rotating-arrow p,
+.SiteNavigation .bottom .left .bottom-left-top a p, 
+.SiteNavigation .bottom .left .bottom-left-top .rotating-arrow p {
+  text-align: center;
+  width: 100%;
+  animation: fadeIn linear 1.25s;
+  -webkit-animation: fadeIn linear 1.25s;
+  -moz-animation: fadeIn linear 1.25s;
+  -o-animation: fadeIn linear 1.25s;
+  -ms-animation: fadeIn linear 1.25s;
+}
+
+.SiteNavigation .bottom .left .bottom-left-bottom {
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+}
+
+.SiteNavigation .bottom .left.opened {
+  min-width: 240px;
+  width: 240px;
+  transition: min-width 1.75s, width 1.75s, display 1.75s, flex-direction 1.75s, justify-content 1.75s, align-items 1.75s;
+}
+
+@media only screen and (max-width: 768px) {
+  .SiteNavigation .bottom .left.opened {
+    min-width: 100%;
+    width: 100%;
+    transition: min-width 1.75s, width 1.75s, display 1.75s, flex-direction 1.75s, justify-content 1.75s, align-items 1.75s;
+  }
+}
+
+.SiteNavigation .bottom .left .icon {
+  transition: background 0.5s, border-right 1.75s;
+}
+
+.SiteNavigation .bottom .left .icon p,
+.SiteNavigation .bottom .left .icon svg { 
+  transition: color 0.5s;
+}
+
+.SiteNavigation .bottom .left .underlined {
+  transition: background 0.5s, border-right 0.5s;
+  background: #61DAFB;
+}
+
+.Search__searchBar__adornment svg {
+  color: #61DAFB;
+  fill: #61DAFB;
+}
+
+
+.SiteNavigation .bottom .left .underlined p,
+.SiteNavigation .bottom .left .underlined svg {
+  font-weight: bold;
+  color: #FFF;
+  transition: color 0.5s;
+}
+
+
+.SiteNavigation .bottom .left.opened .bottom-left-bottom .rotating-arrow > .MuiTypography-body1 { 
+  color: black;
+  margin-left: 1rem;
+}
+
+.SiteNavigation .bottom .left .arrow svg {
+  fill: black;
+  color: black;
+  transition: transform 0.5s;
+}
+
+.SiteNavigation .bottom .left .arrow {
+  transition: .5s ease-in-out;
+}
+
+.SiteNavigation .bottom .left .arrow.rotated {
+  transform: rotate(180deg);
+  transition: .5s ease-in-out;
+}
+
+.SiteNavigation .bottom .right {
+  border-top: 1px solid black;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    text-indent: -70px;
+  }
+
+  100% {
+    opacity: 1;
+    text-indent: 0;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    text-indent: -70px;
+  }
+
+  100% {
+    opacity: 1;
+    text-indent: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    text-indent: -70px;
+  }
+
+  100% {
+    opacity: 1;
+    text-indent: 0;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    text-indent: -70px;
+  }
+
+  100% {
+    opacity: 1;
+    text-indent: 0;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    text-indent: -70px;
+  }
+
+  100% {
+    opacity: 1;
+    text-indent: 0;
+  }
+}
