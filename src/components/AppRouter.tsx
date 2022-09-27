@@ -4,11 +4,11 @@ import { Grid } from '@mui/material';
 import SiteNavigation from './SiteNavigation';
 import Spinner from './Spinner';
 
-const About = React.lazy(() => import("../pages/DemoPage"));
-const Dashboard = React.lazy(() => import("../pages/DemoPage"))
-const Account = lazy(() => import('../pages/DemoPage'));
-const Shop = lazy(() => import('../pages/DemoPage'));
-const Home = lazy(() => import('../pages/DemoPage'));
+const About = React.lazy(() => import("../pages/Page"));
+const Dashboard = React.lazy(() => import("../pages/Page"))
+const Account = lazy(() => import('../pages/Page'));
+const Shop = lazy(() => import('../pages/Page'));
+const Home = lazy(() => import('../pages/Page'));
 
 const AppRouter = () => (
   <SiteNavigation>

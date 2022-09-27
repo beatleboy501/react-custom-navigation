@@ -20,14 +20,11 @@ function setInitialRoute(
   location: H.Location,
   navigate: NavigateFunction,
 ): void {
-  const pathParts = location.pathname.split('/');
-  if (pathParts[1] && pathParts[1] === 'logout') {
-    navigate('/');
-  }
+  const [, route] = location.pathname.split('/');
+  if (route && route === 'logout') navigate('/');
 }
 
-const SiteNavigation = (props: SiteNavigationProps) => {
-  const { children } = props;
+const SiteNavigation = ({ children }: SiteNavigationProps) => {
   const location = useLocation();
   const navigate = useNavigate();
   setInitialRoute(location, navigate);
@@ -40,8 +37,14 @@ const SiteNavigation = (props: SiteNavigationProps) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [showNotifications, setShowNotifications] = useState<boolean>(false);
   const [notifications] = useState<NotificationItem[]>([]);
-  const onClickShowNotifications = () => { };
-  const onSearch = (searchString: string) => { };
+
+  const onClickShowNotifications = () => {
+    // Fill in your code for displaying the notifications list here!
+  };
+  
+  const onSearch = (searchString: string) => { 
+    // Fill in your code for calling the backend API here!
+  };
 
   const toNavLink = (icon: SiteNavigationIcon) => {
     const IconComponent = icon.component;
